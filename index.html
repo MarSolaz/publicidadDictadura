@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Publicidades de la última dictadura</title>
+  <style>
+    body {
+      font-family: sans-serif;
+      background: #f5f5f5;
+      margin: 0;
+      padding: 2rem;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    h1 {
+      text-align: center;
+      margin-bottom: 2rem;
+      color: #333;
+    }
+
+    .button-container {
+      display: flex;
+      gap: 1rem;
+      margin-bottom: 2rem;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    button {
+      padding: 0.5rem 1rem;
+      font-size: 1rem;
+      border: none;
+      border-radius: 8px;
+      background-color: #333;
+      color: white;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+
+    button:hover {
+      background-color: #555;
+    }
+
+    iframe {
+      width: 90vw;
+      max-width: 800px;
+      aspect-ratio: 16 / 9;
+      border: none;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Publicidades de la última dictadura</h1>
+
+  <div class="button-container">
+    <button onclick="setVideo('Ys9GlRowehI')">Importaciones</button>
+    <button onclick="setVideo('zDyACpzoUq0')">Dólar - Costos</button>
+    <button onclick="setVideo('0HwSpebtbzo')">Vacas</button>
+  </div>
+
+  <iframe id="videoPlayer" src="https://www.youtube.com/embed/Ys9GlRowehI" allowfullscreen></iframe>
+
+  <script>
+    function setVideo(videoId) {
+      const iframe = document.getElementById('videoPlayer');
+      iframe.src = `https://www.youtube.com/embed/${videoId}`;
+    }
+  </script>
+
+</body>
+</html>
